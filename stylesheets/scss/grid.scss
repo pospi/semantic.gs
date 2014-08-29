@@ -13,7 +13,8 @@ $columns: 12;
 }
 
 // Set $total-width to 100% for a fluid layout
-$total-width: gridsystem-width($columns);
+//$total-width: gridsystem-width($columns);
+$total-width: 100%;
 
 // Sets default attribute used for column gutters. May be either margin (default) or padding.
 $grid-gutter-attribute: margin;
