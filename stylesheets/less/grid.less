@@ -11,8 +11,16 @@
 @gridsystem-width: (@column-width*@columns) + (@gutter-width*@columns) * 1px;
 
 // Set @total-width to 100% for a fluid layout
-//@total-width: @gridsystem-width;
-@total-width: 100%;
+@total-width: @gridsystem-width;
+
+// Some notes on fluid grid gutters:
+//
+// By default, the column gutters are computed against the total width. When using
+// a percentage as total width, this leads to flexible gutters which may not always
+// be desirable.
+// To setup a fluid grid with fixed-width gutters, do the following:
+// 	- set $gutter-width : 0;
+// 	- wrap your column content in an inner div and apply fixed left/right padding to it
 
 // Sets default attribute used for column gutters. May be either margin (default) or padding.
 @grid-gutter-attribute: margin;
